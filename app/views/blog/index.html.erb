@@ -1,0 +1,9 @@
+<h1>Welcome to Blogie</h1>
+<p>Here you'll find all your bloging needs fulfiled</p>
+
+<h2> This Month's Top Blogs</h2>
+<ul>
+    <% @blogs.each do |value| %>
+    <li><%= value.title %></li>
+    <% end %>
+</ul>
