@@ -4,6 +4,6 @@
 <h2> This Month's Top Blogs</h2>
 <ul>
     <% @blogs.each do |value| %>
-    <li><%= value.title %></li>
+    <li><%= link_to value.title, blog_name_path(value) %></li>
     <% end %>
 </ul>
