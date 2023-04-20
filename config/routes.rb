@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get 'blogs/new' => 'blog#new', as: 'new_blog_entry'
   post 'blogs' => 'blog#create'
   get 'blogs/:id' => 'blog#show', as: 'blog_name'
+  delete 'blogs/:id' => 'blog#destroy', as: 'delete_blog'
 end
