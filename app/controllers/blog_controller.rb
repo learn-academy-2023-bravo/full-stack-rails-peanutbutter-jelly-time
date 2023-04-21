@@ -18,6 +18,10 @@ class BlogController < ApplicationController
         end
     end
 
+    def edit
+        @blog = Blog.find(params[id])
+    end
+
     def destroy
         @blog = Blog.find(params[:id])
         if @blog.destroy
@@ -25,6 +29,8 @@ class BlogController < ApplicationController
         end
     end
 
+
+    
     private
     def blog_params 
         params.require(:blog).permit(:title, :content)
